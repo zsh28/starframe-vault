@@ -1,0 +1,25 @@
+[package]
+name = "starframe-vault"
+version = "0.1.0"
+edition = "2021"
+description = "A Star Frame vault program"
+
+[dependencies]
+star_frame = { version = "0.23.1", features = ["idl"] }
+bytemuck = { version = "1.18", features = ["derive"] }
+borsh = { version = "1.5", features = ["derive"] }
+anyhow = "1.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = []
+test_helpers = ["star_frame/test_helpers"]
+idl = ["star_frame/idl"]
+
+[package.metadata.solana]
+program-id = "GxpAtbXpkbDu5b86TidcmuF5RF9UJm821rqJ5W3S4T12"
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }

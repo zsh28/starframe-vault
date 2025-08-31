@@ -1,0 +1,26 @@
+[toolchain]
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+starframe_vault = "GxpAtbXpkbDu5b86TidcmuF5RF9UJm821rqJ5W3S4T12"
+
+[programs.devnet]
+starframe_vault = "GxpAtbXpkbDu5b86TidcmuF5RF9UJm821rqJ5W3S4T12"
+
+[programs.mainnet]
+starframe_vault = "GxpAtbXpkbDu5b86TidcmuF5RF9UJm821rqJ5W3S4T12"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+build = "starpin build"
+test = "starpin test"
+deploy = "starpin deploy"
