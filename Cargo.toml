@@ -5,7 +5,9 @@ edition = "2021"
 description = "A Star Frame vault program"
 
 [dependencies]
-star_frame = { version = "0.23.1", features = ["idl"] }
+star_frame = { git = "https://github.com/staratlasmeta/star_frame.git", features = [
+    "idl",
+], branch = "stegaBOB/fix/performance-stuff" }
 bytemuck = { version = "1.18", features = ["derive"] }
 borsh = { version = "1.5", features = ["derive"] }
 anyhow = "1.0"
